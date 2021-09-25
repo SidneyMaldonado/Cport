@@ -1,0 +1,8 @@
+inicio "soma"
+    declare $a 
+	declare $b
+	leia $a
+	leia $b
+	$r = $a + $b
+	escreva "fim"
+fim
