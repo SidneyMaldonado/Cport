@@ -34,6 +34,9 @@ public class CPort {
            return;
        }
 
+       // gerar uma cópia do codigo fonte
+       // executar o analisador semântico
+
 
    }
 
