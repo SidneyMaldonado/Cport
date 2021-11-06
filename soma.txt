@@ -1,8 +1,10 @@
 inicio "soma"
-    declare $a 
-	declare $b
-	leia $a
-	leia $b
-	$r = $a + $b
-	escreva "fim"
+   declare $a 
+   declare $b
+   declare $r
+   leia $a
+   leia $b
+   $r = $a + $b
+   escreva $r
+   escreva "fim"
 fim

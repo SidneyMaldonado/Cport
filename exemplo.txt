@@ -2,8 +2,10 @@ inicio "Taboada"
   declare $numero
   declare $resultado
   declare $i
+  escreva "Digite um numero:"
   leia $numero
   imprimir $numero
+  novalinha
   conte em $i de 1 ate 10
        $resultado = $i * $numero
        escreva $i 
@@ -13,7 +15,12 @@ inicio "Taboada"
        escreva $resultado
        novalinha
   fimconte
+  escreva $numero
   se $numero > 10 
      escreva "Numero maior que o da tabuada"
+  fimse
+  novalinha
+  se $numero < 10 
+     escreva "Numero valido para tabuada"
   fimse
 fim

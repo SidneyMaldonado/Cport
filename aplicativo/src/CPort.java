@@ -24,10 +24,9 @@ public class CPort {
 
        // execute a analise lexica
        Boolean lexicoOK = executaAnaliseLexica(dicionario, fonte);
-       if (!lexicoOK){
+       if (!lexicoOK) {
            return;
        }
-
        // executa a analise sintática
        Boolean sintaticoOK = executaAnaliseSintatica(gramatica, fonte);
        if (!sintaticoOK){
@@ -37,6 +36,16 @@ public class CPort {
        // gerar uma cópia do codigo fonte
        // executar o analisador semântico
 
+       // O que é o analisador semântico ?
+       Boolean semanticoOK = executaAnaliseSemantica(fonte);
+       if (!semanticoOK) {
+           return;
+       }
+
+       Boolean compiladoOK = executaCompilacao(fonte);
+       if (!compiladoOK){
+           return;
+       }
 
    }
 
@@ -67,6 +76,29 @@ public class CPort {
        } else {
            System.out.println("Análise Sintática: Erro");
        }
-       return true;
+       return sintaticoOK;
    }
+    public static Boolean executaAnaliseSemantica( List<String> fonte){
+       AnalisadorSemantico as = new AnalisadorSemantico(fonte);
+       Boolean semanticoOK = as.analisar();
+        if (semanticoOK){
+            System.out.println("Análise Semantica: OK");
+        } else {
+            System.out.println("Análise Semantica: Erro");
+        }
+        return semanticoOK;
+    }
+
+    public static Boolean executaCompilacao( List<String> fonte){
+       Compilador comp = new Compilador(fonte);
+       Boolean compiladoOK = comp.compilar();
+
+       if (compiladoOK){
+           System.out.println("Compilação: OK");
+       } else {
+           System.out.println("Compilação: Erro");
+       }
+       return compiladoOK;
+    }
+
 }
