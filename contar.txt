@@ -1,6 +1,7 @@
-inicio "contar"
+inicio "contado"
     declare $a 
 	conte em $a de 1 ate 100
 	   escreva $a
 	fimconte
+	pausa	
 fim

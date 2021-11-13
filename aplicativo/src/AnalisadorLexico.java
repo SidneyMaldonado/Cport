@@ -50,8 +50,6 @@ public class AnalisadorLexico {
 
     public boolean analisar(){
 
-        System.out.println("-------------------------");
-        System.out.println("ANALISE LEXICA:");
 
         Integer palavranumero = 0;
 
@@ -67,9 +65,9 @@ public class AnalisadorLexico {
 
             palavranumero++;
         }
-        System.out.println("-------------------------");
 
         Boolean resultado = this.erros.size() == 0;
+
         return resultado;
     }
 

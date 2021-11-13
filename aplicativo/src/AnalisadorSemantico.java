@@ -12,9 +12,6 @@ public class AnalisadorSemantico {
     }
 
     public Boolean analisar(){
-        System.out.println("-------------------------");
-        System.out.println("ANALISE SEMANTICA:");
-        System.out.println("-------------------------");
 
         Boolean erro = false;
         int numerolinha=0;
@@ -30,7 +27,7 @@ public class AnalisadorSemantico {
             }
             numerolinha++;
         }
-        System.out.println("-------------------------");
+
         return !erro;
     }
 

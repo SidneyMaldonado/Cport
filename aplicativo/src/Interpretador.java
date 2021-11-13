@@ -77,8 +77,17 @@ public class Interpretador {
         if (linha.startsWith("se")){
             resultado = processarSe(linha);
         }
+        if (linha.startsWith("pausa")){
+            processarPausa();
+        }
 
         return resultado;
+    }
+
+    private void processarPausa() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("\nPressione Enter para continuar...");
+        String pausa = teclado.nextLine();
     }
 
     public Boolean processarDeclare(String linha) {
@@ -227,7 +236,7 @@ public class Interpretador {
             this.tabelaSimbolos = novoInterpretador.interpretar();
         }
 
-        this.numerolinha = linhaFinal + 1;
+        this.numerolinha = linhaFinal;
 
         return true;
     }

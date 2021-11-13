@@ -27,7 +27,7 @@ public class Compilador {
             erro = compilarLinha( linha.trim() );
 
             if (erro){
-                System.out.println("Erro ao compilar o programa: " + this.numerolinha);
+                System.out.println("Erro ao compilar o programa: " + this.numerolinha + " => " + linha);
             }
             numerolinha++;
         }
@@ -84,6 +84,10 @@ public class Compilador {
 
         if (linha.startsWith("$")){
             erro = processarExpressao(linha);
+        }
+
+        if (linha.equals("pausa")){
+            erro = processarPausa();
         }
 
         return erro;
@@ -195,6 +199,14 @@ public class Compilador {
         String resultado = destino + " = "  + var1 + operador+var2+";";
         this.byteCode.add(resultado);
         return erro;
+    }
+
+    private Boolean processarPausa(){
+
+        this.byteCode.add("printf(\"\\n\");");
+        this.byteCode.add("system(\"pause\");");
+        return false;
+
     }
 
 }

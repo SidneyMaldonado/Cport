@@ -23,4 +23,5 @@ inicio "Taboada"
   se $numero < 10 
      escreva "Numero valido para tabuada"
   fimse
+  pausa
 fim

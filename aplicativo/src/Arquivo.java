@@ -25,6 +25,7 @@ public class Arquivo {
             while (entrada.hasNext()){
                 conteudo.add(entrada.nextLine());
             }
+
             return conteudo;
         } catch (FileNotFoundException e) {
             return null;

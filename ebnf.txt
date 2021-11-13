@@ -9,3 +9,4 @@
 <string>    ::= <aspas><texto><aspas>
 -----------------------------------
 inicio <string>	
+pausa

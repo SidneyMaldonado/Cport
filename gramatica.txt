@@ -11,3 +11,4 @@
 ^fimse$
 ^fim$
 ^imprimir \$[A-z]{1,10}$
+^pausa$

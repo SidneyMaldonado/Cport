@@ -13,8 +13,6 @@ public class AnalisadorSintatico {
     }
 
     public Boolean analisar(){
-        System.out.println("-------------------------");
-        System.out.println("ANALISE SINTÁTICA:");
         int numerolinha =0;
         Boolean erros = false;
         for(String linha: this.fonte){
